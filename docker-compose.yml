@@ -1,0 +1,12 @@
+services:
+  dev-server:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - type: bind
+        source: ./app.vue
+        target: /usr/src/app/app.vue
+      - type: bind
+        source: ./components
+        target: /usr/src/app/components
