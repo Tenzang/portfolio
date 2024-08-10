@@ -1,9 +1,10 @@
 {
-  "name": "nuxt-app",
+  "name": "portfolio",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "nuxt build",
+    "build:dev": "docker compose up",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
