@@ -1,3 +1,11 @@
 <template>
-	site coming soon...
+  <MyHeader />
+  <NavBar />
+  <Introduction />
+  <About />
+  <Skills />
+  <Projects />
+  <Experience />
+  <Contact />
+  <MyFooter />
 </template>

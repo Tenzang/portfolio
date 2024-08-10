@@ -10,3 +10,15 @@ services:
       - type: bind
         source: ./components
         target: /usr/src/app/components
+      - type: bind
+        source: ./assets
+        target: /usr/src/app/assets
+      - type: bind
+        source: ./public
+        target: /usr/src/app/public
+      - type: bind
+        source: ./nuxt.config.ts
+        target: /usr/src/app/nuxt.config.ts
+      - type: bind
+        source: ./tsconfig.ts
+        target: /usr/src/app/tsconfig.ts
