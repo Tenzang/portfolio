@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { getIconUrl } from '~/util';
+
 interface Skill {
     icon: string;
     label: string;
@@ -6,23 +8,23 @@ interface Skill {
 
 const skills = ref<Skill[]>([
     {
-        icon: "/icons/react.svg",
+        icon: "react",
         label: "React"
     },
     {
-        icon: "/icons/javascript.svg",
+        icon: "javascript",
         label: "Javascript"
     },
     {
-        icon: "/icons/python.svg",
+        icon: "python",
         label: "Python"
     },
     {
-        icon: "/icons/html.svg",
+        icon: "html",
         label: "HTML"
     },
     {
-        icon: "/icons/css.svg",
+        icon: "css",
         label: "CSS"
     },
 ])
@@ -34,14 +36,14 @@ const skills = ref<Skill[]>([
             <ul>
                 <li v-for="{ icon, label } in skills">
                     <div>
-                        <img :src="icon" v-bind:alt="label" />
+                        <img :src="getIconUrl(icon)" v-bind:alt="label" />
                     </div>
                 </li>
             </ul>
             <ul>
                 <li v-for="{ icon, label } in skills">
                     <div>
-                        <img :src="icon" v-bind:alt="label" />
+                        <img :src="getIconUrl(icon)" v-bind:alt="label" />
                     </div>
                 </li>
             </ul>
