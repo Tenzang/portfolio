@@ -93,8 +93,11 @@ html:has(nav:focus-within) {
   overflow-y: hidden;
 }
 
-
 img.fill-highlight {
   filter: brightness(0) saturate(100%) invert(100%) sepia(51%) saturate(2831%) hue-rotate(311deg) brightness(98%) contrast(92%);
+}
+
+img.glow {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(51%) saturate(2831%) hue-rotate(311deg) brightness(98%) contrast(92%) drop-shadow(0 0 1rem $highlight);
 }
 </style>
