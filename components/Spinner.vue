@@ -59,7 +59,9 @@ const { outerItems, innerItems } = props;
         margin-left: -$section-padding-medium;
     }
 
-    box-shadow: 0 4rem 3rem -5rem $highlight;
+    & {
+        box-shadow: 0 4rem 3rem -5rem $highlight;
+    }
 }
 
 .viewer.full {
@@ -86,83 +88,84 @@ ul:nth-child(1) {
 
     $icon-count: 10;
 
+
     li:nth-child(1) {
-        transform: translate(1rem, -50%) rotate(1turn / $icon-count * 0);
+        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 0));
 
         div {
-            transform: rotate(1turn / $icon-count * (-1 * 0));
+            transform: rotate(calc(1turn / $icon-count * (-1 * 0)));
         }
     }
 
     li:nth-child(2) {
-        transform: translate(1rem, -50%) rotate(1turn / $icon-count * 1);
+        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 1));
 
         div {
-            transform: rotate(1turn / $icon-count * (-1 * 1));
+            transform: rotate(calc(1turn / $icon-count * (-1 * 1)));
         }
     }
 
     li:nth-child(3) {
-        transform: translate(1rem, -50%) rotate(1turn / $icon-count * 2);
+        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 2));
 
         div {
-            transform: rotate(1turn / $icon-count * (-1 * 2));
+            transform: rotate(calc(1turn / $icon-count * (-1 * 2)));
         }
     }
 
     li:nth-child(4) {
-        transform: translate(1rem, -50%) rotate(1turn / $icon-count * 3);
+        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 3));
 
         div {
-            transform: rotate(1turn / $icon-count * (-1 * 3));
+            transform: rotate(calc(1turn / $icon-count * (-1 * 3)));
         }
     }
 
     li:nth-child(5) {
-        transform: translate(1rem, -50%) rotate(1turn / $icon-count * 4);
+        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 4));
 
         div {
-            transform: rotate(1turn / $icon-count * (-1 * 4));
+            transform: rotate(calc(1turn / $icon-count * (-1 * 4)));
         }
     }
 
     li:nth-child(6) {
-        transform: translate(1rem, -50%) rotate(1turn / $icon-count * 5);
+        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 5));
 
         div {
-            transform: rotate(1turn / $icon-count * (-1 * 5));
+            transform: rotate(calc(1turn / $icon-count * (-1 * 5)));
         }
     }
 
     li:nth-child(7) {
-        transform: translate(1rem, -50%) rotate(1turn / $icon-count * 6);
+        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 6));
 
         div {
-            transform: rotate(1turn / $icon-count * (-1 * 6));
+            transform: rotate(calc(1turn / $icon-count * (-1 * 6)));
         }
     }
 
     li:nth-child(8) {
-        transform: translate(1rem, -50%) rotate(1turn / $icon-count * 7);
+        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 7));
 
         div {
-            transform: rotate(1turn / $icon-count * (-1 * 7));
+            transform: rotate(calc(1turn / $icon-count * (-1 * 7)));
         }
     }
 
     li:nth-child(9) {
-        transform: translate(1rem, -50%) rotate(1turn / $icon-count * 8);
+        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 8));
 
         div {
-            transform: rotate(1turn / $icon-count * (-1 * 8));
+            transform: rotate(calc(1turn / $icon-count * (-1 * 8)));
         }
     }
 
     li:nth-child(10) {
-        transform: translate(1rem, -50%) rotate(1turn / $icon-count * 9);
+        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 9));
 
         div {
-            transform: rotate(1turn / $icon-count * (-1 * 9));
+            transform: rotate(calc(1turn / $icon-count * (-1 * 9)));
         }
     }
 }
@@ -189,43 +192,44 @@ ul:nth-child(2) {
 
     $icon-count: 5;
 
+
     li:nth-child(1) {
-        transform: translate(1rem, -50%) rotate(1turn / $icon-count * 0);
+        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 0));
 
         div {
-            transform: rotate(1turn / $icon-count * (-1 * 0));
+            transform: rotate(calc(1turn / $icon-count * (-1 * 0)));
         }
     }
 
     li:nth-child(2) {
-        transform: translate(1rem, -50%) rotate(1turn / $icon-count * 1);
+        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 1));
 
         div {
-            transform: rotate(1turn / $icon-count * (-1 * 1));
+            transform: rotate(calc(1turn / $icon-count * (-1 * 1)));
         }
     }
 
     li:nth-child(3) {
-        transform: translate(1rem, -50%) rotate(1turn / $icon-count * 2);
+        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 2));
 
         div {
-            transform: rotate(1turn / $icon-count * (-1 * 2));
+            transform: rotate(calc(1turn / $icon-count * (-1 * 2)));
         }
     }
 
     li:nth-child(4) {
-        transform: translate(1rem, -50%) rotate(1turn / $icon-count * 3);
+        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 3));
 
         div {
-            transform: rotate(1turn / $icon-count * (-1 * 3));
+            transform: rotate(calc(1turn / $icon-count * (-1 * 3)));
         }
     }
 
     li:nth-child(5) {
-        transform: translate(1rem, -50%) rotate(1turn / $icon-count * 4);
+        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 4));
 
         div {
-            transform: rotate(1turn / $icon-count * (-1 * 4));
+            transform: rotate(calc(1turn / $icon-count * (-1 * 4)));
         }
     }
 }
