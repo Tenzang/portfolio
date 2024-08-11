@@ -2,13 +2,13 @@ section {
     width: 100%;
     height: fit-content;
     position: relative;
-    padding: 0 2rem 0;
+    padding: 0 $section-padding-small 0;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
 
     @media (min-width: $screen-medium) {
-        padding: 0 6rem 0;
+        padding: 0 $section-padding-medium 0;
     }
 }
 
