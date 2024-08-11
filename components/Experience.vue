@@ -50,7 +50,7 @@ section {
             span {
                 position: absolute;
                 left: -4rem;
-                background: $bg_highlight;
+                background: $bg-highlight;
                 padding: 0.25rem 0.75rem;
                 width: 3.6rem;
             }

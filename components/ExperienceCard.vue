@@ -2,6 +2,7 @@
 import type { Experience } from "./Experience.vue"
 const { role, employer, description } = defineProps<Omit<Experience, "year">>()
 </script>
+
 <template>
     <h3 class="glow-on-parent-hover">{{ role }}</h3>
     <h4 class="glow-on-parent-hover">{{ employer }}</h4>

@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { getIconUrl } from '~/util';
 
-interface NavItem {
-    label: String;
-}
-
 const navItems = ref([
     "Introduction",
     "About",
@@ -45,14 +41,13 @@ nav {
     top: 0;
     right: 0;
 
-    background: $bg_highlight;
+    background: $bg-highlight;
 
     a {
         color: inherit;
         font-size: $font-large;
         font-family: $font-family-heading;
         padding: 1rem;
-        // padding-left: 3rem;
     }
 
     button {

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import '~/assets/scss/footer.scss'
-
 const publishDate = new Date().toLocaleString('en-AU', {
     dateStyle: "medium"
 });
@@ -16,3 +14,13 @@ const publishDate = new Date().toLocaleString('en-AU', {
         </div>
     </footer>
 </template>
+
+<style scoped lang="scss">
+footer {
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+</style>

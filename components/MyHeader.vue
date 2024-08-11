@@ -1,11 +1,7 @@
-<script>
-import '~/assets/scss/header.scss'
-</script>
-
 <template>
-    <Header>
+    <header>
         <Placeholder />
-    </Header>
+    </header>
 </template>
 
 <style scoped lang="scss">

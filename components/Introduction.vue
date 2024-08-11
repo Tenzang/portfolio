@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { getImageUrl } from "~/util"
 </script>
+
 <template>
     <Section heading="Introduction" class="backdrop">
         <div>
