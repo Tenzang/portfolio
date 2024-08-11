@@ -28,6 +28,10 @@ p, h1, h2, h3, h4, h5, h6 {
 // -- CUSTOM
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: $bg_primary;
   color: $font_primary;
@@ -36,7 +40,7 @@ body {
 }
 
 h1, h2 {
-  font-family: "Arvo";
+  font-family: $font-family-heading;
   font-weight: normal;
 }
 
@@ -48,5 +52,9 @@ h1, h2 {
 
 .font-small {
   font-size: $font-small;
+}
+
+html:has(nav:focus), html:has(nav:focus-within) {
+  overflow-y: hidden;
 }
 // -- CUSTOM

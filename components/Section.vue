@@ -11,7 +11,13 @@ const { heading } = defineProps<Props>()
 
 <template>
     <section :class>
-        <h2>{{ heading }}</h2>
+        <h2 :id="heading">{{ heading }}</h2>
         <slot />
     </section>
 </template>
+
+<style scoped lang="scss">
+h2 {
+    font-size: $font-large;
+}
+</style>
