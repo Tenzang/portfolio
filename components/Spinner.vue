@@ -259,6 +259,7 @@ ul {
 }
 
 img {
-    height: 10vw;
+    width: 10vw;
+    min-width: 3rem;
 }
 </style>
