@@ -56,7 +56,7 @@ const { outerItems, innerItems } = props;
     margin-left: -$section-padding-small;
 
     @media (min-width: $screen-medium) {
-        margin-left: -$section-padding-small;
+        margin-left: -$section-padding-medium;
     }
 
     box-shadow: 0 4rem 3rem -5rem $highlight;
