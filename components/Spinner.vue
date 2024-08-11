@@ -53,10 +53,10 @@ const { outerItems, innerItems } = props;
 
     position: relative;
     width: 100vw;
-    left: -2rem;
+    margin-left: -$section-padding-small;
 
     @media (min-width: $screen-medium) {
-        left: -6rem;
+        margin-left: -$section-padding-small;
     }
 
     box-shadow: 0 4rem 3rem -5rem $highlight;
