@@ -31,20 +31,19 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: start;
-    padding-left: 2rem;
+    align-items: end;
 
     color: $highlight;
 
     height: 100vh;
     width: 100vw;
 
-    transform: translate(-100%, 0);
+    transform: translate(100%, 0);
     transition: transform 0.25s;
 
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
 
     background: $bg_highlight;
 
@@ -53,10 +52,11 @@ nav {
         font-size: $font-large;
         font-family: $font-family-heading;
         padding: 1rem;
+        // padding-left: 3rem;
     }
 
     button {
-        $button-width: 3rem;
+        $button-width: 4rem;
         z-index: 100;
 
         width: $button-width;
@@ -64,10 +64,9 @@ nav {
 
         position: fixed;
         top: 0;
-        right: 0;
-        transform: translate($button-width);
+        left: -$button-width;
 
-        border-radius: 0 0 1rem 0;
+        border-radius: 0 0 0 1rem;
 
         background: $highlight;
 
