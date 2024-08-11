@@ -34,5 +34,6 @@ const skills2 = ref<Skill[]>(skills);
 <template>
     <Section heading="Skills">
         <Spinner :outerItems="skills1" :innerItems="skills2" />
+        <Placeholder />
     </Section>
 </template>
