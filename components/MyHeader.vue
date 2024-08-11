@@ -4,12 +4,7 @@ import '~/assets/scss/header.scss'
 
 <template>
     <Header>
-        <div>
-            Left Header
-        </div>
-        <div>
-            Right Header
-        </div>
+        <Placeholder />
     </Header>
 </template>
 

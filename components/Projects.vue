@@ -1,5 +1,5 @@
 <template>
     <Section heading="Projects">
-        TODO
+        <Placeholder />
     </Section>
 </template>

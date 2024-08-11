@@ -1,5 +1,5 @@
 <template>
     <Section heading="Contact Me">
-        TODO
+        <Placeholder />
     </Section>
 </template>
