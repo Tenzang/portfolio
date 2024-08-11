@@ -9,7 +9,7 @@ interface SpinnerItem {
 interface Props {
     outerItems: SpinnerItem[];
     innerItems: SpinnerItem[];
-    variant?: "full";
+    variant?: "full" | "half";
 }
 
 const props = defineProps<Props>();
@@ -18,7 +18,7 @@ const { outerItems, innerItems } = props;
 </script>
 
 <template>
-    <div :class="'viewer ' + props.variant || ''">
+    <div :class="'viewer ' + (props.variant || 'half')">
         <ul>
             <li v-for=" { icon, label } in outerItems">
                 <div>
@@ -58,10 +58,16 @@ const { outerItems, innerItems } = props;
     @media (min-width: $screen-medium) {
         left: -6rem;
     }
+
+    box-shadow: 0 4rem 3rem -5rem $highlight;
 }
 
 .viewer.full {
     height: 100vw;
+}
+
+.viewer.half {
+    border-bottom: 2px solid $highlight;
 }
 
 ul:nth-child(1) {

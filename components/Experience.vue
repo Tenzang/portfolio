@@ -78,7 +78,22 @@ section {
             background: $highlight;
             box-shadow: 0 0 1rem 0rem $highlight;
             z-index: 1;
+            transition: all 0.25s;
+
         }
+
+        @media (min-width: $screen-large) {
+            li::before {
+                background: white;
+                box-shadow: none;
+            }
+
+            li:hover::before {
+                background: $highlight;
+                box-shadow: 0 0 1rem 0rem $highlight;
+            }
+        }
+
 
         li::after {
             content: '';
