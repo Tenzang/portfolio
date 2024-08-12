@@ -34,6 +34,8 @@ section {
     flex-direction: column;
     gap: 1.25rem;
 
+    overflow: hidden;
+
     @media (min-width: $screen-medium) {
         padding: 0 $section-padding-medium 0;
     }

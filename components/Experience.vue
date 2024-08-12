@@ -24,7 +24,7 @@ const experiences = ref<Experience[]>([
 </script>
 
 <template>
-    <Section heading="Experience" class="backdrop">
+    <Section heading="Experience" variant="backdrop">
         <ul>
             <li v-for="{ role, employer, description, year } in experiences">
                 <span>{{ year }}</span>
