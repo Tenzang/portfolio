@@ -4,7 +4,7 @@ import { getIconUrl } from "~/util";
 
 <template>
     <div>
-        <img :src="getIconUrl('construction')" alt="construction icon" class="fill-highlight">
+        <NuxtImg :src="getIconUrl('construction')" alt="construction icon" class="fill-highlight" />
         Section under construction...
     </div>
 </template>

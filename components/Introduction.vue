@@ -5,8 +5,9 @@ import { getImageUrl } from "~/util"
 <template>
     <Section heading="Introduction" class="backdrop">
         <div>
-            <img :src="getImageUrl('profile.png')" class="profile" alt="profile picture of Loden">
-            <img :src="getImageUrl('profile-doodles.png')" class="doodle glow" alt="profile picture doodles">
+            <NuxtImg :src="getImageUrl('profile.png')" format="webp" class="profile" alt="profile picture of Loden" />
+            <NuxtImg :src="getImageUrl('profile-doodles.png')" format="webp" class="doodle glow"
+                alt="profile picture doodles" />
         </div>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius at magnam tempore ipsam cupiditate. Dolor, quasi
         amet corrupti culpa nostrum in molestiae. Ea reprehenderit doloribus nisi quod sequi perferendis in?

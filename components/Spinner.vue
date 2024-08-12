@@ -22,14 +22,14 @@ const { outerItems, innerItems } = props;
         <ul>
             <li v-for=" { icon, label } in outerItems">
                 <div>
-                    <img :src="getIconUrl(icon)" v-bind:alt="label" />
+                    <NuxtImg :src="getIconUrl(icon)" v-bind:alt="label" />
                 </div>
             </li>
         </ul>
         <ul>
             <li v-for="{ icon, label } in innerItems">
                 <div>
-                    <img :src="getIconUrl(icon)" v-bind:alt="label" />
+                    <NuxtImg :src="getIconUrl(icon)" v-bind:alt="label" />
                 </div>
             </li>
         </ul>

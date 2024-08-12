@@ -16,7 +16,9 @@ const navItems = ref([
         <a v-for="item in navItems" :href="`#${item}`">
             {{ item }}
         </a>
-        <button><img :src="getIconUrl('hamburger')" /></button>
+        <button aria-label="Close Nav">
+            <NuxtImg :src="getIconUrl('hamburger')" alt="hamburger icon" />
+        </button>
     </nav>
 </template>;
 

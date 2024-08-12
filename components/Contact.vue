@@ -25,7 +25,7 @@ const socials = ref<Social[]>(
         <ul>
             <li v-for="{ icon, href } in socials">
                 <a :href="href" target="_blank">
-                    <img :src="getIconUrl(icon)" :alt="`${icon} icon`" class="fill-highlight" />
+                    <NuxtImg :src="getIconUrl(icon)" :alt="`${icon} icon`" class="fill-highlight" />
                 </a>
             </li>
 
