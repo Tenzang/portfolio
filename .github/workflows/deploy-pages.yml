@@ -30,8 +30,6 @@ jobs:
         run: bun install
       - name: Generate static website
         run: bun generate
-        env:
-          VITE_PATH_PREFIX: ${{ github.event.repository.name }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
