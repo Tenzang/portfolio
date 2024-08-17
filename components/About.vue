@@ -1,5 +1,5 @@
 <template>
-    <Section heading="About">
+    <Section heading="About" variant="backdrop">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta qui illum libero minus laboriosam? Consequatur
         totam odio, sint excepturi culpa, placeat, minima voluptates itaque distinctio ut consequuntur architecto.
         Aliquid, quam.
