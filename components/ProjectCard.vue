@@ -1,35 +1,63 @@
 <script setup lang="ts">
 import type { Project } from './Projects.vue';
-const { title } = defineProps<Project>();
+
+interface Props {
+    reverse?: boolean;
+}
+
+const { title, description, img, reverse } = defineProps<Project & Props>();
 </script>
 
 <template>
-    <div class="container">
-        <NuxtImg src="https://placehold.co/400x400" alt="placeholder" />
-        <h3>{{ title }}</h3>
-        <span>
+    <div :class="'container' + (reverse ? ' reverse' : '')">
+        <div class="img-container">
+            <NuxtImg :src="img" alt="placeholder" />
+        </div>
+        <div class="info">
+            <h3>{{ title }}</h3>
             {{ description }}
-        </span>
+        </div>
     </div>
 </template>
 
 <style scoped lang="scss">
 div.container {
     display: grid;
-    grid-template-rows: auto 1fr;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
-    background: $bg-secondary;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    gap: 1rem;
 
-    img {
-        grid-row-start: 1;
-        grid-row-end: 3;
-        justify-self: end;
+    overflow: hidden;
+    transition: all 0.25s;
+
+    @media (min-width: $screen-small) {
+        grid-template-columns: repeat(2, 1fr);
+
+        &.reverse {
+            .img-container {
+                grid-column: 2 / 3;
+            }
+
+            .info {
+                grid-column: 1 / 2;
+                grid-row: 1;
+            }
+        }
     }
 
-    h3,
-    span {
-        grid-column: 2;
+    .img-container {
+        width: 100%;
+        overflow: hidden;
+
+        img {
+            width: inherit;
+        }
+    }
+
+    .info {
+        overflow: hidden;
+        height: inherit;
+        padding: 1rem;
     }
 }
 </style>
