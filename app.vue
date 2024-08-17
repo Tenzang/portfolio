@@ -1,5 +1,4 @@
 <template>
-  <MyHeader />
   <NavBar />
   <Introduction />
   <About />
@@ -152,6 +151,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  padding-top: 2rem;
 }
 
 .font-small {

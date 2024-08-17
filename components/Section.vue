@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Permutations } from '~/util/types'
 
-type Variant = Permutations<"backdrop" | "border" | "center">;
+type Variant = Permutations<"backdrop" | "border" | "center" | "no-header">;
 
 interface Props {
     heading: string;
@@ -12,8 +12,8 @@ const { heading } = defineProps<Props>()
 </script>
 
 <template>
-    <section :class="variant">
-        <h2 :id="heading">{{ heading }}</h2>
+    <section :class="variant" :id="heading">
+        <h2>{{ heading }}</h2>
         <slot></slot>
     </section>
 </template>
@@ -37,7 +37,6 @@ section {
     @media (min-width: $screen-medium) {
         padding: 0 $section-padding-medium 0;
     }
-
 
     &.backdrop::before {
         background: $bg-secondary;
@@ -82,6 +81,11 @@ section {
 
     &.center {
         align-items: center;
+    }
+
+    &.no-header h2 {
+        visibility: hidden;
+        display: none;
     }
 }
 </style>

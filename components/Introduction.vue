@@ -3,7 +3,8 @@ import { getImageUrl } from "~/util"
 </script>
 
 <template>
-    <Section heading="Introduction" class="backdrop">
+    <Section heading="Introduction" variant="no-header">
+        <MyHeader />
         <div>
             <NuxtImg :src="getImageUrl('profile.png')" format="webp" class="profile" alt="profile picture of Loden" />
             <NuxtImg :src="getImageUrl('profile-doodles.png')" format="webp" class="doodle glow"
@@ -17,7 +18,7 @@ import { getImageUrl } from "~/util"
 <style scoped lang="scss">
 div {
     position: relative;
-    margin: 0 auto;
+    margin: 1rem auto;
 }
 
 img {
