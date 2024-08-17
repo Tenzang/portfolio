@@ -34,48 +34,54 @@ section {
     flex-direction: column;
     gap: 1.25rem;
 
-    overflow: hidden;
-
     @media (min-width: $screen-medium) {
         padding: 0 $section-padding-medium 0;
     }
-}
-
-section.center {
-    align-items: center;
-}
-
-section.border h2::before,
-section.border h2::after {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: $highlight;
-    display: block;
-
-    position: absolute;
-    top: 1.5rem;
-}
-
-section.border h2::before {
-    transform: translate(calc(-100% - 1rem));
-}
 
 
-section.border h2::after {
-    right: calc(-100% - 1rem);
-}
+    &.backdrop::before {
+        background: $bg-secondary;
+        width: 100vw;
+        height: 100%;
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        top: 1.25rem;
+        left: 0;
+        box-shadow: 0 0 1rem -1rem black;
+    }
 
-section.backdrop::before {
-    background: $bg-secondary;
-    width: 100vw;
-    height: 100%;
-    content: '';
-    display: block;
-    position: absolute;
-    z-index: -1;
-    top: 1.25rem;
-    left: 0;
-    box-shadow: 0 0 1rem -1rem black;
+    &.border {
+        &::before {
+            width: 100vw;
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 1.5rem;
+            left: 0;
+            border-top: 2px solid $highlight;
+        }
+
+        h2::before {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: $bg-primary;
+            display: block;
+
+            position: absolute;
+            z-index: -1;
+            top: 1.5rem;
+
+            left: -10%;
+            width: 120%;
+        }
+    }
+
+    &.center {
+        align-items: center;
+    }
 }
 </style>
