@@ -29,6 +29,8 @@ div.container {
 
     overflow: hidden;
     transition: all 0.25s;
+    max-width: 70rem;
+    margin: 0 auto;
 
     @media (min-width: $screen-small) {
         grid-template-columns: repeat(2, 1fr);
@@ -51,6 +53,7 @@ div.container {
 
         img {
             width: inherit;
+            max-width: 50rem;
         }
     }
 
