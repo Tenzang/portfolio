@@ -9,7 +9,6 @@ const percent = computed(() => {
     const { value, max } = props;
     return Math.floor(value / max * 100);
 });
-// console.log(roundedPercent.value);
 </script>
 
 <template>
