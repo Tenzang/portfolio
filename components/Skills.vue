@@ -50,17 +50,22 @@ const matchingSkills = computed(() => selectedSkills.value?.filter(({ label }) =
             <input v-model="inputValue" placeholder="What are you after?">
         </div>
         <div class="scroller">
-            <ul>
-                <li v-for="skill in filteredSkills" :key="skill.label">
-                    <button v-on:click="() => { skill.isChecked = !skill.isChecked }"
-                        v-bind:class="skill.isChecked ? ['selected'] : []">
-                        {{ skill.label }}
-                    </button>
-                </li>
-            </ul>
+            <div class="button-container">
+                <ul>
+                    <li v-for="skill in filteredSkills" :key="skill.label"
+                        :data-is-known="mySkillSet.has(skill.label.toLowerCase())">
+                        <button @click="skill.isChecked = !skill.isChecked"
+                            :class="skill.isChecked ? ['selected'] : []">
+                            {{ skill.label }}
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="floater">
+                <Meter :max="selectedSkills?.length || 0" :value="matchingSkills?.length || 0" />
+            </div>
         </div>
 
-        <Meter :max="selectedSkills?.length || 0" :value="matchingSkills?.length || 0" />
     </Section>
 </template>
 
@@ -86,7 +91,7 @@ const matchingSkills = computed(() => selectedSkills.value?.filter(({ label }) =
         transition: 0.25s box-shadow;
 
         @media (min-width: $screen-small) {
-            width: 10rem;
+            width: 10.5rem;
         }
 
         &:focus {
@@ -101,19 +106,54 @@ const matchingSkills = computed(() => selectedSkills.value?.filter(({ label }) =
 }
 
 .scroller {
-    height: 30vh;
+    $height: 30vh;
+    height: $height;
     overflow-y: scroll;
     padding: 0 2rem;
     position: relative;
+    border-top: 1px solid $highlight;
+    border-bottom: 1px solid $highlight;
+
+    .button-container {
+        min-height: 100%;
+        height: fit-content;
+    }
+
+    .floater {
+        position: sticky;
+        bottom: 0;
+        height: 4rem;
+        align-content: center;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: inherit;
+            backdrop-filter: blur(6px);
+            -webkit-mask-image: linear-gradient(to top, black 0, transparent 100%, black 0);
+            mask-image: linear-gradient(to top, black 0, transparent 100%, black 0);
+            z-index: -1;
+        }
+    }
 }
+
 
 ul {
     display: flex;
     gap: 0.5rem;
-    padding: 0;
+    padding: 1rem 0;
     flex-wrap: wrap;
     list-style: none;
     align-items: center;
+    justify-content: center;
+
+    li[data-is-known="true"]>button.selected {
+        border: 1px solid $highlight;
+        box-shadow: 0 0 2rem -0.5rem $highlight;
+    }
 
     button {
         width: 100%;
@@ -137,10 +177,10 @@ ul {
         }
 
         &.selected {
-            border: 1px solid $highlight;
-            box-shadow: 0 0 2rem -0.5rem $highlight;
+            border: 1px solid gray;
             color: $highlight;
         }
+
     }
 }
 </style>
