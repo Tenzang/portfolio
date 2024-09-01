@@ -86,7 +86,7 @@ const matchingSkills = computed(() => selectedSkills.value?.filter(({ label }) =
         transition: 0.25s box-shadow;
 
         @media (min-width: $screen-small) {
-            width: 10rem;
+            width: 10.5rem;
         }
 
         &:focus {
