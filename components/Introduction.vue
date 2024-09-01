@@ -7,6 +7,8 @@ import { getImageUrl } from "~/util"
         <MyHeader />
         <div>
             <NuxtImg :src="getImageUrl('profile.png')" format="webp" class="profile" alt="profile picture of Loden" />
+            <NuxtImg :src="getImageUrl('profile-doodle-glasses.png')" format="webp" class="doodle glow glasses"
+                alt="profile picture glasses doodle" />
             <NuxtImg :src="getImageUrl('profile-doodles.png')" format="webp" class="doodle glow"
                 alt="profile picture doodles" />
         </div>
@@ -37,14 +39,24 @@ img.doodle {
     top: 0;
     left: 0;
 
-    transition: opacity 0.5s;
+    transition: opacity 0.5s, top 3s linear;
 
     @media (min-width: $screen-large) {
         opacity: 0;
     }
+
+    &.glasses {
+        top: -100%;
+        opacity: 1;
+    }
 }
 
-img.doodle:hover {
+img.doodle:hover,
+.doodle:has(+ .doodle:hover) {
     opacity: 1;
+
+    &.glasses {
+        top: 0;
+    }
 }
 </style>
