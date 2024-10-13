@@ -147,5 +147,6 @@ export default defineEventHandler((e) => {
     "SSL/TLS",
     "HTTP/HTTPS Protocols",
     "Load Balancing",
+    "Semantic Versioning",
   ];
 });

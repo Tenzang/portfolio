@@ -84,5 +84,9 @@ export default defineEventHandler(() => {
       icon: "bunjs",
       label: "Bun JS",
     },
+    {
+      icon: "-",
+      label: "Semantic Versioning",
+    },
   ];
 });
