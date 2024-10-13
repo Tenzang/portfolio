@@ -28,8 +28,9 @@ nav {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: end;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 
     color: $highlight;
 
@@ -43,13 +44,15 @@ nav {
     top: 0;
     right: 0;
 
-    background: $bg-highlight;
+    background: $bg-primary;
 
     a {
         color: inherit;
         font-size: $font-large;
         font-family: $font-family-heading;
         padding: 1rem;
+        font-weight: bold;
+        text-decoration: none;
     }
 
     button {
