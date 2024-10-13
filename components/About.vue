@@ -1,10 +1,7 @@
 <template>
     <Section heading="About" variant="backdrop">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta qui illum libero minus laboriosam? Consequatur
-        totam odio, sint excepturi culpa, placeat, minima voluptates itaque distinctio ut consequuntur architecto.
-        Aliquid, quam.
-        Asperiores, quidem fugit hic reiciendis blanditiis autem ad. Minus quae reiciendis voluptates dolore aliquam,
-        nesciunt, maiores consequatur, placeat cupiditate repellat magnam expedita! Iste, dolores harum maxime pariatur
-        obcaecati error culpa.
+        <p>I'm a bootcamp-trained software engineer with teaching aid experience, supporting aspiring developers
+            beginning their careers, and consultancy experience, working with clients to build and maintain a variety
+            of cloud-based services. </p>
     </Section>
 </template>

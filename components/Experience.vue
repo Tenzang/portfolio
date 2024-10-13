@@ -10,13 +10,13 @@ const experiences = ref<Experience[]>([
     {
         role: "Software Engineer",
         employer: "33BONDI",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta adipisci dolore est sint debitis eum ut officiis modi quibusdam consequatur quidem quaerat qui quod, similique maiores, nemo cupiditate aliquam sed. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta adipisci dolore est sint debitis eum ut officiis modi quibusdam consequatur quidem quaerat qui quod, similique maiores, nemo cupiditate aliquam sed.",
+        description: "As a Software Engineer at 33BONDI I've worked with a variety of clients, building responsive web applications tailored to their needs. This role has given me hands-on experience across the entire development lifecycle and deepened my expertise in cloud computing, particularly with Google Cloud Platform, enabling me to design scalable and secure solutions.",
         year: 2024
     },
     {
         role: "Instructional Associate",
         employer: "General Assembly",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta adipisci dolore est sint debitis eum ut officiis modi quibusdam consequatur quidem quaerat qui quod, similique maiores, nemo cupiditate aliquam sed.",
+        description: "As an Instructional Associate at a coding bootcamp, I've supported students by assisting with problem-solving, debugging, and code reviews while ensuring adherence to coding conventions. I shared & maintained GitBooks with lesson notes, led live coding sessions to demonstrate solutions of varying complexity, and provided guidance & support with development workflows.",
         year: 2022
     },
 

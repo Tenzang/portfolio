@@ -75,15 +75,16 @@ const { outerItems, innerItems } = props;
 $icon-total: 21;
 $icon-inner-count: 7;
 $icon-outer-count: $icon-total - $icon-inner-count;
+$cycle-duration: 60s;
 
 ul:nth-child(1) {
-    animation-duration: 30s;
+    animation-duration: $cycle-duration;
     animation-name: infiniterotate;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 
     img {
-        animation-duration: 30s;
+        animation-duration: $cycle-duration;
         animation-name: infiniterotate;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
@@ -104,7 +105,8 @@ ul:nth-child(1) {
 }
 
 ul:nth-child(2) {
-    animation-duration: 30s;
+
+    animation-duration: $cycle-duration;
     animation-name: infiniterotate;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -117,7 +119,7 @@ ul:nth-child(2) {
     left: 18vw;
 
     img {
-        animation-duration: 30s;
+        animation-duration: $cycle-duration;
         animation-name: infiniterotate;
         animation-iteration-count: infinite;
         animation-timing-function: linear;

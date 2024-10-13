@@ -12,8 +12,10 @@ import { getImageUrl } from "~/util"
             <NuxtImg :src="getImageUrl('profile-doodles.png')" format="webp" class="doodle glow"
                 alt="profile picture doodles" />
         </div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius at magnam tempore ipsam cupiditate. Dolor, quasi
-        amet corrupti culpa nostrum in molestiae. Ea reprehenderit doloribus nisi quod sequi perferendis in?
+        <span class="quote">
+            <q>Most good programmers do programming not because they expect to get paid or get adulation by the public,
+                but
+                because it is fun to program.</q> - Linus Torvalds</span>
     </Section>
 </template>
 
@@ -57,6 +59,18 @@ img.doodle:hover,
 
     &.glasses {
         top: 0;
+    }
+}
+
+span.quote {
+    max-width: 50rem;
+    margin: 0 auto;
+
+    text-align: center;
+
+    q {
+        font-style: italic;
+        font-size: $font-medium;
     }
 }
 </style>

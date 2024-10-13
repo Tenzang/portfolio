@@ -7,19 +7,19 @@ export interface Project {
 
 const projects = ref<Project[]>([
     {
-        title: "example project 1",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque sequi nobis praesentium saepe rerum nemo sunt dolore tempora a corrupti deserunt, animi alias minus iste tempore esse accusamus ad asperiores! Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-        img: "https://placehold.co/400x400"
+        title: "Retro Arcade",
+        description: 'Retro Arcade is a web game application created by Loden Gendun and Kristabel Wong for our fourth and final project at General Assembly. We chose a fun final project that could show off our skills with React.',
+        img: "retro-arcade.png"
     },
     {
-        title: "example project 2",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque sequi nobis praesentium saepe rerum nemo sunt dolore tempora a corrupti deserunt, animi alias minus iste tempore esse accusamus ad asperiores!",
-        img: "https://placehold.co/400x400"
+        title: "Auto Novel",
+        description: 'A CRUD app with a twist! This project was my first foray into backend web development using Ruby on Rails. Developing Auto-Novel was a fun exercise in backend data-handling, as the "create novel" functionality is based on a crude random novel construction algorithm I designed.',
+        img: "auto-novel.png"
     },
     {
-        title: "example project 3",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque sequi nobis praesentium saepe rerum nemo sunt dolore tempora a corrupti deserunt, animi alias minus iste tempore esse accusamus ad asperiores!",
-        img: "https://placehold.co/400x400"
+        title: "Tic Tac Toe",
+        description: "The classic game of Tic-Tac-Toe built just using good old HTML, CSS & Javascript. This is where things started for me.",
+        img: "tic-tac-toe.png"
     }
 ])
 </script>
