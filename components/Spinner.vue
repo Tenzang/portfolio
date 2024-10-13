@@ -72,6 +72,10 @@ const { outerItems, innerItems } = props;
     border-bottom: 2px solid $highlight;
 }
 
+$icon-total: 21;
+$icon-inner-count: 7;
+$icon-outer-count: $icon-total - $icon-inner-count;
+
 ul:nth-child(1) {
     animation-duration: 30s;
     animation-name: infiniterotate;
@@ -86,88 +90,19 @@ ul:nth-child(1) {
         animation-direction: reverse;
     }
 
-    $icon-count: 10;
+    @for $i from 1 through $icon-outer-count {
+        $angle: (
+            1turn / $icon-outer-count) * ($i - 1
+        );
 
-
-    li:nth-child(1) {
-        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 0));
-
-        div {
-            transform: rotate(calc(1turn / $icon-count * (-1 * 0)));
-        }
-    }
-
-    li:nth-child(2) {
-        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 1));
+    li:nth-child(#{$i}) {
+        transform: translate(1rem, -50%) rotate(calc(#{$angle}));
 
         div {
-            transform: rotate(calc(1turn / $icon-count * (-1 * 1)));
+            transform: rotate(calc(-#{$angle}));
         }
     }
-
-    li:nth-child(3) {
-        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 2));
-
-        div {
-            transform: rotate(calc(1turn / $icon-count * (-1 * 2)));
-        }
-    }
-
-    li:nth-child(4) {
-        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 3));
-
-        div {
-            transform: rotate(calc(1turn / $icon-count * (-1 * 3)));
-        }
-    }
-
-    li:nth-child(5) {
-        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 4));
-
-        div {
-            transform: rotate(calc(1turn / $icon-count * (-1 * 4)));
-        }
-    }
-
-    li:nth-child(6) {
-        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 5));
-
-        div {
-            transform: rotate(calc(1turn / $icon-count * (-1 * 5)));
-        }
-    }
-
-    li:nth-child(7) {
-        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 6));
-
-        div {
-            transform: rotate(calc(1turn / $icon-count * (-1 * 6)));
-        }
-    }
-
-    li:nth-child(8) {
-        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 7));
-
-        div {
-            transform: rotate(calc(1turn / $icon-count * (-1 * 7)));
-        }
-    }
-
-    li:nth-child(9) {
-        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 8));
-
-        div {
-            transform: rotate(calc(1turn / $icon-count * (-1 * 8)));
-        }
-    }
-
-    li:nth-child(10) {
-        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 9));
-
-        div {
-            transform: rotate(calc(1turn / $icon-count * (-1 * 9)));
-        }
-    }
+}
 }
 
 ul:nth-child(2) {
@@ -190,48 +125,19 @@ ul:nth-child(2) {
         animation-timing-function: linear;
     }
 
-    $icon-count: 5;
+    @for $i from 1 through $icon-inner-count {
+        $angle: (
+            1turn / $icon-inner-count) * ($i - 1
+        );
 
-
-    li:nth-child(1) {
-        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 0));
-
-        div {
-            transform: rotate(calc(1turn / $icon-count * (-1 * 0)));
-        }
-    }
-
-    li:nth-child(2) {
-        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 1));
+    li:nth-child(#{$i}) {
+        transform: translate(1rem, -50%) rotate(calc(#{$angle}));
 
         div {
-            transform: rotate(calc(1turn / $icon-count * (-1 * 1)));
+            transform: rotate(calc(-#{$angle}));
         }
     }
-
-    li:nth-child(3) {
-        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 2));
-
-        div {
-            transform: rotate(calc(1turn / $icon-count * (-1 * 2)));
-        }
-    }
-
-    li:nth-child(4) {
-        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 3));
-
-        div {
-            transform: rotate(calc(1turn / $icon-count * (-1 * 3)));
-        }
-    }
-
-    li:nth-child(5) {
-        transform: translate(1rem, -50%) rotate(calc(1turn / $icon-count * 4));
-
-        div {
-            transform: rotate(calc(1turn / $icon-count * (-1 * 4)));
-        }
-    }
+}
 }
 
 ul {

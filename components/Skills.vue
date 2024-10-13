@@ -2,8 +2,11 @@
 const { data: { value: globalSkillsRes } } = await useFetch('/api/skills/global')
 const { data: { value: skills } } = await useFetch('/api/skills');
 
-const skills1 = ref([...(skills || []), ...(skills || [])]);
-const skills2 = ref(skills || []);
+const totalSkillsToDisplayCount = 21;
+const innerSkillCount = 7;
+
+const outerSkills = ref(skills?.slice(innerSkillCount, totalSkillsToDisplayCount) || []);
+const innerSkills = ref(skills?.slice(0, innerSkillCount) || []);
 
 const skillList = ref(globalSkillsRes?.map((skill, i) => ({
     id: i,
@@ -44,7 +47,7 @@ const matchingSkills = computed(() => selectedSkills.value?.filter(({ label }) =
 
 <template>
     <Section heading="Skills">
-        <Spinner :outerItems="skills1" :innerItems="skills2" />
+        <Spinner :outerItems="outerSkills" :innerItems="innerSkills" />
         <div class="head">
             <span class="emphasize">Select your TECH</span>
             <input v-model="inputValue" placeholder="What are you after?">
