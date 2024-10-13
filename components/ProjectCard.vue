@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { getImageUrl } from "~/util"
 import type { Project } from './Projects.vue';
 
 interface Props {
@@ -11,7 +12,7 @@ const { title, description, img, reverse } = defineProps<Project & Props>();
 <template>
     <div :class="'container' + (reverse ? ' reverse' : '')">
         <div class="img-container">
-            <NuxtImg :src="img" alt="placeholder" />
+            <NuxtImg :src="getImageUrl(img)" alt="placeholder" />
         </div>
         <div class="info">
             <h3>{{ title }}</h3>
