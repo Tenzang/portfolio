@@ -10,7 +10,7 @@ export default defineEventHandler(() => {
     },
     {
       icon: "nodejs",
-      label: "Node JS",
+      label: "Node.js",
     },
     {
       icon: "git",

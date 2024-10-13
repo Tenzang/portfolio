@@ -91,18 +91,16 @@ ul:nth-child(1) {
     }
 
     @for $i from 1 through $icon-outer-count {
-        $angle: (
-            1turn / $icon-outer-count) * ($i - 1
-        );
+        $angle: calc(1turn / $icon-outer-count) * ($i - 1);
 
-    li:nth-child(#{$i}) {
-        transform: translate(1rem, -50%) rotate(calc(#{$angle}));
+        li:nth-child(#{$i}) {
+            transform: translate(1rem, -50%) rotate(#{$angle});
 
-        div {
-            transform: rotate(calc(-#{$angle}));
+            div {
+                transform: rotate(calc(-#{$angle}));
+            }
         }
     }
-}
 }
 
 ul:nth-child(2) {
@@ -126,18 +124,16 @@ ul:nth-child(2) {
     }
 
     @for $i from 1 through $icon-inner-count {
-        $angle: (
-            1turn / $icon-inner-count) * ($i - 1
-        );
+        $angle: calc(1turn / $icon-inner-count) * ($i - 1);
 
-    li:nth-child(#{$i}) {
-        transform: translate(1rem, -50%) rotate(calc(#{$angle}));
+        li:nth-child(#{$i}) {
+            transform: translate(1rem, -50%) rotate(#{$angle});
 
-        div {
-            transform: rotate(calc(-#{$angle}));
+            div {
+                transform: rotate(calc(-#{$angle}));
+            }
         }
     }
-}
 }
 
 ul {
@@ -164,8 +160,6 @@ ul {
 
         }
     }
-
-
 }
 
 img {
