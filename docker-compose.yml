@@ -20,5 +20,5 @@ services:
         source: ./nuxt.config.ts
         target: /usr/src/app/nuxt.config.ts
       - type: bind
-        source: ./tsconfig.ts
-        target: /usr/src/app/tsconfig.ts
+        source: ./tsconfig.json
+        target: /usr/src/app/tsconfig.json
