@@ -3,6 +3,14 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
 
+  scripts: {
+    registry: {
+      googleTagManager: {
+        id: "GTM-WRZWF7DD",
+      },
+    },
+  },
+
   app: {
     head: {
       htmlAttrs: {
@@ -30,5 +38,5 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxt/image"],
+  modules: ["@nuxt/image", "@nuxt/scripts"],
 });

@@ -58,7 +58,7 @@ const matchingSkills = computed(() => selectedSkills.value?.filter(({ label }) =
                     <li v-for="skill in filteredSkills" :key="skill.label"
                         :data-is-known="mySkillSet.has(skill.label.toLowerCase())">
                         <button @click="skill.isChecked = !skill.isChecked"
-                            :class="skill.isChecked ? ['selected'] : []">
+                            :class="['tech-button', ...(skill.isChecked ? ['selected'] : [])]">
                             {{ skill.label }}
                         </button>
                     </li>
