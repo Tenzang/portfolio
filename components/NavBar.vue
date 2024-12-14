@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import throttle from 'lodash.throttle'
 import { getIconUrl } from '~/util';
 
 const navItems = ref([
@@ -9,14 +10,28 @@ const navItems = ref([
     "Experience",
     "Contact Me"
 ]);
+
+const isNavOpen = ref(false);
+
+// NOTE: throttle used because clicking nav button
+// triggers twice even w/ e.stopPropogation() call
+const toggleNav = ref(throttle((e) => {
+    console.log('toggle')
+    e.stopPropogation();
+    isNavOpen.value = !isNavOpen.value;
+}, 100, {
+    trailing: false
+}));
+
 </script>
 
 <template>
-    <nav>
-        <a v-for="item in navItems" :href="`#${item}`">
+    <!-- NOTE: focusout closes nav when link selected w/ keyboard -->
+    <nav :class="{ open: isNavOpen }" @click="toggleNav" @focusout="isNavOpen = false">
+        <a v-for="item in navItems" :href="`#${item}`" tabIndex="0">
             {{ item }}
         </a>
-        <button id="nav-open" aria-label="Close Nav">
+        <button id="nav-open" aria-label="Close Nav" @click="toggleNav" tabIndex="-1">
             <NuxtImg :src="getIconUrl('hamburger')" alt="hamburger icon" />
         </button>
     </nav>
@@ -79,7 +94,8 @@ nav {
     }
 }
 
-nav:focus,
+// NOTE: :focus-within enables nav control by tabbing
+nav.open,
 nav:focus-within {
     transform: translate(0, 0);
 }
